@@ -1,0 +1,6 @@
+{
+  "name": "Jalsa Udaipur – Lake View Pure Veg Restaurant",
+  "description": "Pure vegetarian rooftop dining overlooking Lake Pichola in Udaipur. Authentic Rajasthani delicacies, sunset ambience, and warm hospitality.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
