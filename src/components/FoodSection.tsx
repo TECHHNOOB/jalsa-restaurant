@@ -51,16 +51,16 @@ export const FoodSection: React.FC<FoodSectionProps> = ({ onOpenBooking }) => {
           </div>
         </div>
 
-        {/* Categories Tab Navigation: Pill Style matching reference */}
-        <div className="flex justify-center mb-12 overflow-x-auto pb-2 scrollbar-none">
-          <div className="inline-flex p-1.5 bg-[#F0E8DC] rounded-full border border-[#E4D9CA] max-w-full">
+        {/* Categories Tab Navigation: Pill Style with mobile horizontal scrolling */}
+        <div className="w-full overflow-x-auto pb-4 pt-1 mb-10 no-scrollbar flex sm:justify-center">
+          <div className="inline-flex items-center gap-1 p-1.5 bg-[#F0E8DC] rounded-full border border-[#E4D9CA] w-max shrink-0 mx-auto sm:mx-0 shadow-xs">
             {MENU_CATEGORIES.map((cat) => {
               const isActive = activeCategory === cat.id;
               return (
                 <button
                   key={cat.id}
                   onClick={() => setActiveCategory(cat.id)}
-                  className={`px-5 sm:px-6 py-2 text-xs font-sans tracking-wider uppercase font-medium transition-all duration-200 whitespace-nowrap cursor-pointer rounded-full ${
+                  className={`px-4 sm:px-6 py-2 text-xs font-sans tracking-wider uppercase font-medium transition-all duration-200 whitespace-nowrap cursor-pointer rounded-full ${
                     isActive
                       ? 'bg-[#451A14] text-white shadow-sm'
                       : 'text-[#5E5147] hover:text-[#241C18] hover:bg-white/60'
