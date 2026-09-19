@@ -21,7 +21,7 @@ export const SignatureDishes: React.FC<SignatureDishesProps> = ({ onOpenBooking,
               <span>SIGNATURE CREATIONS</span>
             </div>
             <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl tracking-tight text-[#241C18] leading-[1.1] mb-4">
-              Dishes you'll come <br />
+              Dishes you'll come
               <span className="italic font-normal text-[#A44A29]">back for.</span>
             </h2>
             <p className="font-sans text-[#5E5147] text-sm sm:text-base leading-relaxed">
