@@ -101,10 +101,10 @@ export const LocationSection: React.FC = () => {
                       EMAIL INQUIRIES
                     </span>
                     <a
-                      href="mailto:nfo@mewarivilla.com"
+                      href="mailto:info@mewarivilla.com"
                       className="font-sans text-[#241C18] hover:text-[#A44A29] text-sm font-medium transition-colors"
                     >
-                      nfo@mewarivilla.com
+                      info@mewarivilla.com
                     </a>
                   </div>
                 </div>

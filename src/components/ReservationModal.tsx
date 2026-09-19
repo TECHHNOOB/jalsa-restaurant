@@ -53,8 +53,8 @@ export const ReservationModal: React.FC<ReservationModalProps> = ({
     setIsSubmitting(true);
 
     try {
-      // Submit inquiry directly to nfo@mewarivilla.com (with cc info@mewarivilla.com)
-      await fetch('https://formsubmit.co/ajax/nfo@mewarivilla.com', {
+      // Submit inquiry directly to info@mewarivilla.com
+      await fetch('https://formsubmit.co/ajax/info@mewarivilla.com', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -62,7 +62,6 @@ export const ReservationModal: React.FC<ReservationModalProps> = ({
         },
         body: JSON.stringify({
           _subject: `Table Reservation Inquiry: ${name} (${guests} Guests - ${date})`,
-          _cc: 'info@mewarivilla.com',
           _template: 'table',
           'Guest Name': name,
           'Contact Phone': phone,
@@ -96,7 +95,7 @@ ${email ? `• Email: ${email}\n` : ''}• Date: ${date}
 • Occasion: ${occasion}
 ${notes ? `• Special Notes: ${notes}` : ''}
 
-Inquiry sent to nfo@mewarivilla.com. Please confirm availability. Thank you!`;
+Inquiry sent to info@mewarivilla.com. Please confirm availability. Thank you!`;
     return encodeURIComponent(msg);
   };
 
@@ -118,7 +117,7 @@ Inquiry sent to nfo@mewarivilla.com. Please confirm availability. Thank you!`;
       `${notes ? `• Special Notes: ${notes}\n` : ''}\n` +
       `Please confirm table availability.\n\nThank you!`
     );
-    return `mailto:nfo@mewarivilla.com?cc=info@mewarivilla.com&subject=${subject}&body=${body}`;
+    return `mailto:info@mewarivilla.com?subject=${subject}&body=${body}`;
   };
 
   const mailtoUrl = generateMailtoUrl();
@@ -348,7 +347,7 @@ Inquiry sent to nfo@mewarivilla.com. Please confirm availability. Thank you!`;
                   {isSubmitting ? (
                     <>
                       <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
-                      <span>Sending to nfo@mewarivilla.com...</span>
+                      <span>Sending to info@mewarivilla.com...</span>
                     </>
                   ) : (
                     <span>Submit Inquiry</span>
@@ -368,7 +367,7 @@ Inquiry sent to nfo@mewarivilla.com. Please confirm availability. Thank you!`;
               </div>
 
               <p className="text-[11px] text-[#7A6C62] text-center font-light">
-                Inquiries are submitted directly to <span className="font-medium text-[#A44A29]">nfo@mewarivilla.com</span>. Our manager will confirm availability within minutes.
+                Inquiries are submitted directly to <span className="font-medium text-[#A44A29]">info@mewarivilla.com</span>. Our manager will confirm availability within minutes.
               </p>
             </form>
           ) : (
@@ -384,7 +383,7 @@ Inquiry sent to nfo@mewarivilla.com. Please confirm availability. Thank you!`;
                 </h4>
                 <p className="text-sm font-sans text-[#5E5147] mt-1">
                   Thank you, <span className="font-semibold text-[#241C18]">{name}</span>. Your table inquiry has been forwarded to{' '}
-                  <span className="font-semibold text-[#A44A29]">nfo@mewarivilla.com</span> for{' '}
+                  <span className="font-semibold text-[#A44A29]">info@mewarivilla.com</span> for{' '}
                   <span className="font-semibold text-[#241C18]">{date}</span> at{' '}
                   <span className="font-semibold text-[#241C18]">{time}</span> ({guests} Guests).
                 </p>
@@ -392,7 +391,7 @@ Inquiry sent to nfo@mewarivilla.com. Please confirm availability. Thank you!`;
 
               <div className="bg-white p-5 rounded-2xl text-left text-xs font-sans text-[#5E5147] space-y-1.5 border border-[#ECE2D5]">
                 <div className="font-semibold text-[#241C18] mb-1">Inquiry Summary:</div>
-                <div>• Inquired To: <span className="font-medium text-[#A44A29]">nfo@mewarivilla.com</span></div>
+                <div>• Inquired To: <span className="font-medium text-[#A44A29]">info@mewarivilla.com</span></div>
                 <div>• Seating: {seating}</div>
                 <div>• Occasion: {occasion}</div>
                 {email && <div>• Email: {email}</div>}
